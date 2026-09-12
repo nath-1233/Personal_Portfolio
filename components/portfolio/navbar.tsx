@@ -47,14 +47,11 @@ export function Navbar() {
       )}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a
-          href="#home"
-          className="flex items-center gap-2 font-mono text-sm font-semibold"
-        >
-          <span className="grid size-8 place-items-center rounded-md bg-primary text-primary-foreground">
-            NM
+        <a href="#home" className="flex items-center gap-2 text-lg font-bold tracking-tight">
+          <span className="text-primary">Nathaniel</span> Miamba
+          <span className="hidden rounded-full bg-primary/10 px-2 py-1 text-xs font-medium text-primary sm:inline-flex">
+            ♬ Creator
           </span>
-          <span className="hidden sm:inline">Nathaniel Miamba</span>
         </a>
 
         <div className="hidden items-center gap-1 lg:flex">

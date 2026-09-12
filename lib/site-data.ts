@@ -2,9 +2,11 @@ export const PROFILE = {
   name: 'Nathaniel Miamba',
   tagline: 'B.Tech Engineering Student | Software Testing & Automation',
   email: 'nathaniel.miamba@example.com',
+  phone: '+91 00000 00000',
   location: 'Punjab, India',
   university: 'Lovely Professional University',
   degree: 'B.Tech Engineering',
+  profileImage: '/assets/images/profile-picture.jpg',
   socials: {
     linkedin: 'https://www.linkedin.com/in/nathaniel-miamba',
     github: 'https://github.com/nathaniel-miamba',
