@@ -25,9 +25,9 @@ export function Projects() {
         {featured ? (
           <Reveal className="mt-12">
             <Card className="group overflow-hidden p-0 transition-colors hover:border-primary/40">
-              <div className="grid lg:grid-cols-2">
-                <div className="grid gap-3 bg-muted/30 p-3 sm:grid-cols-2 lg:grid-cols-1">
-                  <div className="relative aspect-video overflow-hidden rounded-lg">
+              <div className="grid items-stretch lg:min-h-[460px] lg:grid-cols-2">
+                <div className="grid gap-3 bg-muted/30 p-3 sm:grid-cols-2 lg:h-full lg:grid-cols-1 lg:grid-rows-2">
+                  <div className="relative min-h-0 overflow-hidden rounded-lg aspect-video lg:aspect-auto">
                   <Image
                     src={featured.image || '/placeholder.svg'}
                     alt={`${featured.title} project preview`}
@@ -40,7 +40,7 @@ export function Projects() {
                   {featured.gallery?.map((image) => (
                     <div
                       key={image}
-                      className="relative aspect-video overflow-hidden rounded-lg"
+                      className="relative min-h-0 overflow-hidden rounded-lg aspect-video lg:aspect-auto"
                     >
                       <Image
                         src={image}
