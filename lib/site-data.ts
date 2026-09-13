@@ -2,7 +2,7 @@ export const PROFILE = {
   name: 'Nathaniel Miamba',
   tagline: 'B.Tech Engineering Student | Software Testing & Automation',
   email: 'jiparitech@gmail.com',
-  phone: '+91 83602 74523',
+  phone: '+918360274523',
   whatsapp: '918360274523',
   location: 'Punjab, India',
   locationUrl:
