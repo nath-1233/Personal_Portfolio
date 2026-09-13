@@ -88,25 +88,6 @@ export const PROJECTS = [
     featured: true,
   },
   {
-    id: 'software-testing',
-    title: 'Software Testing Projects',
-    subtitle: 'Practical QA & manual testing case studies',
-    description:
-      'Hands-on testing work covering test scenarios, detailed test cases, expected vs. actual results, pass/fail status tracking, structured bug reports, and complete test documentation.',
-    image: '/projects/software-testing.png',
-    tags: [
-      'Test Scenarios',
-      'Test Cases',
-      'Expected Results',
-      'Actual Results',
-      'Pass / Fail Status',
-      'Bug Reports',
-      'Test Documentation',
-    ],
-    link: '#contact',
-    featured: false,
-  },
-  {
     id: 'automation',
     title: 'Automation Projects',
     subtitle: 'Bots and process automation experiments',
