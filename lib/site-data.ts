@@ -74,6 +74,7 @@ export const PROJECTS = [
     description:
       'An innovative EV service station concept designed to combine wireless EV charging, automatic vehicle alignment, AI-based energy management, vehicle inspection, automated payment, safety monitoring, renewable energy, battery storage, and cloud monitoring into an integrated system.',
     image: '/projects/autocharge-hub.png',
+    gallery: ['/projects/autocharge-hub-details.png'],
     tags: [
       'EV Technology',
       'Wireless Charging',

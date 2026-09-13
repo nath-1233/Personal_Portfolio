@@ -26,7 +26,8 @@ export function Projects() {
           <Reveal className="mt-12">
             <Card className="group overflow-hidden p-0 transition-colors hover:border-primary/40">
               <div className="grid lg:grid-cols-2">
-                <div className="relative aspect-video overflow-hidden lg:aspect-auto">
+                <div className="grid gap-3 bg-muted/30 p-3 sm:grid-cols-2 lg:grid-cols-1">
+                  <div className="relative aspect-video overflow-hidden rounded-lg">
                   <Image
                     src={featured.image || '/placeholder.svg'}
                     alt={`${featured.title} project preview`}
@@ -35,6 +36,21 @@ export function Projects() {
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     priority
                   />
+                  </div>
+                  {featured.gallery?.map((image) => (
+                    <div
+                      key={image}
+                      className="relative aspect-video overflow-hidden rounded-lg"
+                    >
+                      <Image
+                        src={image}
+                        alt={`${featured.title} detail preview`}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(min-width: 1024px) 50vw, 100vw"
+                      />
+                    </div>
+                  ))}
                 </div>
                 <CardContent className="flex flex-col justify-center gap-4 p-6 sm:p-8">
                   <Badge className="w-fit font-mono">Featured Project</Badge>
