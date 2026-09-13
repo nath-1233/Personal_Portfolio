@@ -38,3 +38,16 @@ export function YouTubeIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   )
 }
+
+export function FacebookIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="M13.5 21v-8h2.67l.4-3h-3.07V8.08c0-.87.24-1.46 1.5-1.46h1.61V3.94c-.28-.04-1.24-.12-2.36-.12-2.34 0-3.94 1.43-3.94 4.06V10H7.66v3h2.65v8h3.19z" />
+    </svg>
+  )
+}

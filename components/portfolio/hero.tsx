@@ -91,7 +91,9 @@ export function Hero() {
 
           <div className="mt-6 flex items-center gap-2 text-sm text-muted-foreground">
             <MapPin className="size-4 text-primary" />
-            {PROFILE.location}
+            <a href={PROFILE.locationUrl} target="_blank" rel="noreferrer" className="hover:text-primary">
+              {PROFILE.location}
+            </a>
           </div>
         </div>
       </div>

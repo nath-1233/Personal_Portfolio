@@ -1,4 +1,5 @@
 import {
+  FacebookIcon,
   GitHubIcon,
   LinkedInIcon,
   YouTubeIcon,
@@ -9,6 +10,7 @@ const socials = [
   { label: 'LinkedIn', icon: LinkedInIcon, href: PROFILE.socials.linkedin },
   { label: 'GitHub', icon: GitHubIcon, href: PROFILE.socials.github },
   { label: 'YouTube', icon: YouTubeIcon, href: PROFILE.socials.youtube },
+  { label: 'Facebook', icon: FacebookIcon, href: PROFILE.socials.facebook },
 ]
 
 export function Footer() {
