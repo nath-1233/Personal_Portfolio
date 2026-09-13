@@ -20,14 +20,11 @@ const ThemeContext = createContext<ThemeContextValue | null>(null)
 const STORAGE_KEY = 'nm-portfolio-theme'
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('dark')
+  const [theme, setTheme] = useState<Theme>('light')
 
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY) as Theme | null
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)',
-    ).matches
-    const initial: Theme = stored ?? (prefersDark ? 'dark' : 'light')
+    const initial: Theme = stored ?? 'light'
     setTheme(initial)
   }, [])
 
