@@ -1,10 +1,11 @@
 'use client'
 
-import { CheckCircle2, Mail, Send } from 'lucide-react'
+import { CheckCircle2, Mail, MapPin, Phone, Send } from 'lucide-react'
 import { useState } from 'react'
 import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/portfolio/section-heading'
 import {
+  FacebookIcon,
   GitHubIcon,
   LinkedInIcon,
   YouTubeIcon,
@@ -20,6 +21,7 @@ const socials = [
   { label: 'LinkedIn', icon: LinkedInIcon, href: PROFILE.socials.linkedin },
   { label: 'GitHub', icon: GitHubIcon, href: PROFILE.socials.github },
   { label: 'YouTube', icon: YouTubeIcon, href: PROFILE.socials.youtube },
+  { label: 'Facebook', icon: FacebookIcon, href: PROFILE.socials.facebook },
 ]
 
 export function Contact() {
@@ -63,6 +65,37 @@ export function Contact() {
                 </span>
                 <span className="font-mono text-sm">{PROFILE.email}</span>
               </a>
+
+              <div className="grid gap-3 sm:grid-cols-2">
+                <a
+                  href={`https://wa.me/${PROFILE.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary/40"
+                >
+                  <span className="grid size-10 place-items-center rounded-md bg-primary/10 text-primary">
+                    <Phone className="size-5" />
+                  </span>
+                  <span className="text-sm">
+                    <strong className="block">WhatsApp</strong>
+                    <span className="text-muted-foreground">Message me</span>
+                  </span>
+                </a>
+                <a
+                  href={PROFILE.locationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary/40"
+                >
+                  <span className="grid size-10 place-items-center rounded-md bg-primary/10 text-primary">
+                    <MapPin className="size-5" />
+                  </span>
+                  <span className="text-sm">
+                    <strong className="block">Location</strong>
+                    <span className="text-muted-foreground">{PROFILE.location}</span>
+                  </span>
+                </a>
+              </div>
 
               <div className="flex gap-3">
                 {socials.map((social) => (

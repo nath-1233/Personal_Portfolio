@@ -1,16 +1,20 @@
 export const PROFILE = {
   name: 'Nathaniel Miamba',
   tagline: 'B.Tech Engineering Student | Software Testing & Automation',
-  email: 'nathaniel.miamba@example.com',
-  phone: '+91 00000 00000',
+  email: 'jiparitech@gmail.com',
+  phone: '+918360274523',
+  whatsapp: '918360274523',
   location: 'Punjab, India',
+  locationUrl:
+    'https://www.google.com/maps/search/?api=1&query=Punjab%2C%20India',
   university: 'Lovely Professional University',
   degree: 'B.Tech Engineering',
   profileImage: '/assets/images/profile-picture.jpg',
   socials: {
     linkedin: 'https://www.linkedin.com/in/nathaniel-miamba',
-    github: 'https://github.com/nathaniel-miamba',
-    youtube: 'https://www.youtube.com/@nathaniel-miamba',
+    github: 'https://github.com/nath-1233?tab=repositories',
+    youtube: 'https://www.youtube.com/@Jiparitech',
+    facebook: 'https://www.facebook.com/profile.php?id=61583260030771',
   },
 }
 
