@@ -5,12 +5,6 @@ import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/portfolio/section-heading'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import {
-  CERTIFICATIONS,
-  PROFILE,
-  PROJECTS,
-  SKILL_GROUPS,
-} from '@/lib/site-data'
 
 const resumeBlocks = [
   {
@@ -35,56 +29,7 @@ const resumeBlocks = [
   },
 ]
 
-function buildResumeText() {
-  const lines: string[] = []
-  lines.push(PROFILE.name.toUpperCase())
-  lines.push(PROFILE.tagline)
-  lines.push(`${PROFILE.email} | ${PROFILE.location}`)
-  lines.push('')
-
-  lines.push('PROFILE SUMMARY')
-  lines.push(resumeBlocks[0].body)
-  lines.push('')
-
-  lines.push('EDUCATION')
-  lines.push(`${PROFILE.degree} — ${PROFILE.university} (Ongoing)`)
-  lines.push('')
-
-  lines.push('TECHNICAL SKILLS')
-  SKILL_GROUPS.forEach((g) => {
-    lines.push(`- ${g.title}: ${g.skills.join(', ')}`)
-  })
-  lines.push('')
-
-  lines.push('PROJECTS')
-  PROJECTS.forEach((p) => {
-    lines.push(`- ${p.title}: ${p.subtitle}`)
-  })
-  lines.push('')
-
-  lines.push('TRAINING & CERTIFICATIONS')
-  CERTIFICATIONS.forEach((c) => {
-    lines.push(`- ${c.name} — ${c.org} (${c.date})`)
-  })
-
-  return lines.join('\n')
-}
-
 export function Resume() {
-  const handleDownload = () => {
-    const blob = new Blob([buildResumeText()], {
-      type: 'text/plain;charset=utf-8',
-    })
-    const url = URL.createObjectURL(blob)
-    const anchor = document.createElement('a')
-    anchor.href = url
-    anchor.download = 'Nathaniel-Miamba-Resume.txt'
-    document.body.appendChild(anchor)
-    anchor.click()
-    anchor.remove()
-    URL.revokeObjectURL(url)
-  }
-
   return (
     <section id="resume" className="border-b border-border py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -95,7 +40,17 @@ export function Resume() {
               title="A quick snapshot of my background"
               description="Download a copy or read the summary of my profile, education, skills, projects, and training."
             />
-            <Button onClick={handleDownload} size="lg" className="mt-8">
+            <Button
+              render={
+                <a
+                  href="/assets/Nathaniel-Miamba-CV.pdf"
+                  download="Nathaniel-Miamba-CV.pdf"
+                />
+              }
+              nativeButton={false}
+              size="lg"
+              className="mt-8"
+            >
               <Download className="size-4" />
               Download Resume
             </Button>
